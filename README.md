@@ -1,5 +1,5 @@
 # Restaurant-Order-Program
-A program modeling a restaurant w/o classes
+A program modeling a restaurant with out classes
 This is basicly a random program that I made that simulates a resturaunt program. I'm also using it to help me get 
 familiar with github
 
