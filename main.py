@@ -23,8 +23,8 @@ about_screen = f"""
 \t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
 
-#Set up a dictionary for the accurate totals:
-orders = {}
+#Set up a List for the accurate totals:
+orders = []
 
 #Dictionary
 sandwich_answer={
