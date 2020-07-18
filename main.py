@@ -17,9 +17,8 @@ about_screen = f"""
 \n\tComing Soon:\n
 \t\tHelp page
 \t\tProgram Loops more than once
-\t\tEven MORE efficient program; re-write ENTIRE code and use modules
+\t\tEven MORE efficient program; re-write ENTIRE code and use modules and classes
 \t\tA GUI
-\t\tClasses
 \n\tUgrent Updates:\n
 \t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
