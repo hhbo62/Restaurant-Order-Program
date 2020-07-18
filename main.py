@@ -157,7 +157,7 @@ def run_program():
 #ask
 def ask():
 	print("\n\tWelcome to Resturaunt Order Program!")
-	start_about_help = input(f'This is version {version}. \n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in	the new update). \nType [help] to go to help. ')
+	start_about_help = input(f'This is version {version}. \n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in	the new update). \nType [help] to go to help. \nType [exit] to exit program.')
 
 	answer = start_about_help.lower()
 	start(answer)
@@ -180,5 +180,8 @@ def start(answer):
     elif answer == "help":
         print(f'\nhelp is coming soon! (Probably in verson 2.5. This is only version {version})\n')
         ask()
+    elif answer == "exit":
+        print("Exiting Program")
+        sleep(1)  
 ask()
 #issubclass
