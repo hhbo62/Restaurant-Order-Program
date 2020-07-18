@@ -23,8 +23,8 @@ about_screen = f"""
 \t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
 
-#Set up a List for the accurate totals:
-orders = []
+#Set up a dict for the accurate totals:
+orders = {}
 
 #Dictionary
 sandwich_answer={
@@ -84,6 +84,7 @@ def take_order():
     sandwich_answer["qt"] = int(sandwich_answer1)
     orders['Sandwich'] = sandwich_answer["qt"]
 
+
     print(f'\nPancake: ({pancake_answer["calories"]} calories, ${pancake_answer["price"]})')
     pancake_answer1 = input()
     pancake_answer["qt"] = int(pancake_answer1)
@@ -138,7 +139,7 @@ def take_order():
             print(f'Breakfast Pizzas: {bp_answer["qt"]}')
     
     #total price+Cal
-    total_price = "global"
+    total_price = 123
     total_price = sandwich_answer["price"] + pancake_answer["price"] + se_answer["price"] + be_answer["price"]
 
     print(f'Total: ${total_price}')
