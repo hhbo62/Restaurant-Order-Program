@@ -181,7 +181,7 @@ def start(answer):
         print(f'\nhelp is coming soon! (Probably in verson 2.5. This is only version {version})\n')
         ask()
     elif answer == "exit":
-        print("\nExiting Program")
+        print("\nExiting Program...")
         sleep(1)  
 ask()
 #issubclass
