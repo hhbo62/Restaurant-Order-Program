@@ -1,4 +1,4 @@
-#Add: openFiles.py (after finished) Add: acurate totals
+#Add: openFiles.py (after finished) Add: acurate totals.
 #note: this is the main program. All other files are test files (except stats.txt).
 from time import sleep
 
