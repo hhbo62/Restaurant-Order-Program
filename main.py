@@ -1,4 +1,4 @@
-#Add: openFiles.py (after finished) Add: acurate totals
+#Add: openFiles.py (after finished) Add: acurate totals.
 #note: this is the main program. All other files are test files (except stats.txt).
 from time import sleep
 
@@ -24,7 +24,7 @@ about_screen = f"""
 \t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
 
-#Set up a dictionary for the accurate totals:
+#Set up a dict for the accurate totals:
 orders = {}
 
 #Dictionary
@@ -85,6 +85,7 @@ def take_order():
     sandwich_answer["qt"] = int(sandwich_answer1)
     orders['Sandwich'] = sandwich_answer["qt"]
 
+
     print(f'\nPancake: ({pancake_answer["calories"]} calories, ${pancake_answer["price"]})')
     pancake_answer1 = input()
     pancake_answer["qt"] = int(pancake_answer1)
@@ -139,7 +140,7 @@ def take_order():
             print(f'Breakfast Pizzas: {bp_answer["qt"]}')
     
     #total price+Cal
-    total_price = "global"
+    total_price = 123
     total_price = sandwich_answer["price"] + pancake_answer["price"] + se_answer["price"] + be_answer["price"]
 
     print(f'Total: ${total_price}')
@@ -183,5 +184,6 @@ def start(answer):
         ask()
     elif answer == "exit":
         print("\nExiting Program...")
-        sleep(1)  
+        sleep(1)   
 ask()
+#issubclass

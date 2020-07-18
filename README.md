@@ -1,9 +1,10 @@
 # Restaurant-Order-Program
-A program modeling a restaurant w/o classes
-This is basicly a random program that I made that simulates a resturaunt program
+A program modeling a restaurant with out classes
+This is basicly a random program that I made that simulates a resturaunt program. I'm also using it to help me get 
+familiar with github
 
 ## How to help:
-Help with accurate totals. (see issue 1)
+Help with accurate totals. [see issue 1 (https://github.com/hhbo62/Restaurant-Order-Program/issues/1)]
 
 ## How to use:
 Under menu, choose an option: **start**, **help**, **about**, or **exit**
