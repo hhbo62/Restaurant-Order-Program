@@ -1,3 +1,4 @@
+#https://github.com/hhbo62/Restaurant-Order-Program
 #Add: openFiles.py (after finished) Add: acurate totals.
 #note: this is the main program. All other files are test files (except stats.txt).
 from time import sleep
@@ -155,7 +156,7 @@ def run_program():
 def ask():
     print("\n\tWelcome to Resturaunt Order Program!")
     start_about_help = input(
-        f'This is version {version}. \n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in	the new update). \nType [help] to go to help. \nType [exit] to exit program. '
+        f'\n\nGitHub: https://github.com/hhbo62/Restaurant-Order-Program\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in	the new update). \nType [help] to go to help. \nType [exit] to exit program. '
     )
 
     answer = start_about_help.lower()
