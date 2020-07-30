@@ -24,24 +24,33 @@ about_screen = f"""
 \n\tUgrent Updates:\n
 \t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
-quantity = None
+quantity = 00
 
-items = []
+#items = []
 #Class
 class FoodsList():
     def __init__(self):
-        items = []
+        self.items = []
+        self.quantity = 0
+        self.totalPrice = 0
+        self.totalCal = 0
         
     def addFood(self, foodObject):
-        items.append(foodObject)
+        self.items.append(foodObject)
 
         
-    def getTotal(self):
-        total = 0
-        for item in item:
-            total += getPrice(item)
-            quantity =  total
-        
+    def getTotalPrice(self):
+        self.totalPrice = 0
+        for item in self.items:
+            item.getPrice()
+            self.totalPrice += int(item.totalPrice)
+            
+    def getTotalCal(self):
+        self.totalCal = 0
+        for item in self.items:
+            item.getCal()
+            self.totalCal += int(item.cal)
+    
 
 class Food():
     def __init__(self, food, qt, price, cal):
@@ -52,13 +61,13 @@ class Food():
         
         
     def getPrice(self):
-        quantity = int(self.price * self.qt)
+        self.totalPrice = int(self.price) * self.qt
     
     def getQt(self):
-        quantity = int(self.qt)
+        self.quantity = self.qt
     
     def getCal(self):
-        quantity = int(self.cal)
+        self.cal = self.cal
         
 
 #Confirm
@@ -123,54 +132,50 @@ def take_order():
     print(f' \n\tYour Order:\n')
 
     #to display or not to display. That is the question
-    sandwhich.getQt
-    if int(quantity) > 0:
-        if int(quantity) == 1:
+    sandwhich.getQt()
+    if int(sandwhich.quantity) > 0:
+        if int(sandwhich.quantity) == 1:
             print("One Sandwich")
         else:
-            print(f'Sandwiches: {sandwich_answer["qt"]}')
+            print(f'Sandwiches: {sandwhich.quantity}')
 
-    pancake.getQt
-    if int(quantity) > 0:
-        if int(quantity) == 1:
+    pancake.getQt()
+    if float(pancake.quantity) > 0:
+        if float(pancake.quantity) == 1:
             print("One Pancake")
         else:
-            print(f'Pancakes: {pancake_answer["qt"]}')
+            print(f'Pancakes: {pancake.quantity}')
     
-    se.getQt
-    if int(quantity) > 0:
-        if int(quantity) == 1:
+    se.getQt()
+    if float(se.quantity) > 0:
+        if float(se.quantity) == 1:
             print("One Scrambled Egg")
         else:
-            print(f'Scrambled Eggs: {se_answer["qt"]}')
+            print(f'Scrambled Eggs: {se.quantity}')
 
-    be.getQt
-    if int(quantity) > 0:
-        if int(quantity) == 1:
+    be.getQt()
+    if float(be.quantity) > 0:
+        if float(be.quantity) == 1:
             print("One Boiled Egg")
         else:
-            print(f'Boiled Eggs: {be_answer["qt"]}')
+            print(f'Boiled Eggs: {be.quantity}')
 
-    bp.getQt
-    if int(quantity) > 0:
-        if int(quantity) == 1:
+    bp.getQt()
+    if float(bp.quantity) > 0:
+        if float(bp.quantity) == 1:
             print("One Breakfast Pizza")
         else:
-            print(f'Breakfast Pizzas: {bp_answer["qt"]}')
-
+            print(f'Breakfast Pizzas: {bp.quantity}')
     #total price+Cal
-    #total_price = sandwich_answer["price"] + pancake_answer[
-     #   "price"] + se_answer["price"] + be_answer["price"]
-
-    print(f'Total: ${total_price}')
-
-    total_cal = "global"
-    total_cal = sandwich_answer["calories"] + pancake_answer[
-        "calories"] + se_answer["calories"] + be_answer["calories"]
-
-    print(f'Calories: {total_cal}')
-
-
+    foodslist.getTotalPrice()
+    
+    print("Total Price:")
+    print(f'${foodslist.totalPrice}')
+    
+    foodslist.getTotalCal
+    print("Total Cals:")
+    print(foodslist.totalCal)
+    
 #run
 def run_program():
     print("\n\tResturant Order Form:")
@@ -216,4 +221,3 @@ def start(answer):
 
 foodslist = FoodsList()
 ask()
-#issubclass
