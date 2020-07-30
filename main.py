@@ -28,23 +28,23 @@ class FoodsList():
         self.quantity = 0
         self.totalPrice = 0
         self.totalCal = 0
-        
+
     def addFood(self, foodObject):
         self.items.append(foodObject)
 
-        
+
     def getTotalPrice(self):
         self.totalPrice = 0
         for item in self.items:
             item.getPrice()
             self.totalPrice += int(item.totalPrice)
-            
+
     def getTotalCal(self):
         self.totalCal = 0
         for item in self.items:
             item.getCal()
             self.totalCal += int(item.cal)
-    
+
 
 class Food():
     def __init__(self, food, qt, price, cal):
@@ -52,17 +52,17 @@ class Food():
         self.qt = qt
         self.price = price
         self.cal = cal
-        
-        
+
+
     def getPrice(self):
         self.totalPrice = int(self.price) * self.qt
-    
+
     def getQt(self):
         self.quantity = self.qt
-    
+
     def getCal(self):
         self.cal = self.cal
-        
+
 
 #Confirm
 def confirm():
@@ -93,7 +93,7 @@ def take_order():
     sandwich_answer1 = input()
     sandwhich = Food("sandwhich", sandwich_answer1, 2.00, 300)
     foodslist.addFood(sandwhich)
-    
+
 
     print(
         f'\nPancake: (300 calories, $2.00)'
@@ -139,7 +139,7 @@ def take_order():
             print("One Pancake")
         else:
             print(f'Pancakes: {pancake.quantity}')
-    
+
     se.getQt()
     if float(se.quantity) > 0:
         if float(se.quantity) == 1:
@@ -162,14 +162,14 @@ def take_order():
             print(f'Breakfast Pizzas: {bp.quantity}')
     #total price+Cal
     foodslist.getTotalPrice()
-    
+
     print("Total Price:")
     print(f'${foodslist.totalPrice}')
-    
+
     foodslist.getTotalCal()
     print("Total Cals:")
     print(foodslist.totalCal)
-    
+
 #run
 def run_program():
     print("\n\tResturant Order Form:")
@@ -181,7 +181,7 @@ def run_program():
 def ask():
     print("\n\tWelcome to Resturaunt Order Program!")
     start_about_help = input(
-        f'\n\nGitHub: https://github.com/hhbo62/Restaurant-Order-Program\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. '
+        f'\n\nWebsite: https://hhbo62.github.io/Restaurant-Order-Program/\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. '
     )
 
     answer = start_about_help.lower()
