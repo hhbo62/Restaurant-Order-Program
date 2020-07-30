@@ -5,7 +5,7 @@ This is basicly a random program that I made that simulates a resturaunt program
 familiar with github
 
 ## Use:
-Go to https://Restaurant-Order-Program.hhbo64.repl.run
+Go to [repl](https://Restaurant-Order-Program.hhbo64.repl.run)
 ## How to help:
 If you can, open a pull request to help with accurate totals. [see issue 1 (https://github.com/hhbo62/Restaurant-Order-Program/issues/1)]
 
