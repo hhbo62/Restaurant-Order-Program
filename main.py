@@ -25,20 +25,33 @@ about_screen = f"""
 \t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
 
-#Set up a dict for the accurate totals:
-orders = {}
+#Class
+class Foods(self):
+    def __init__(self):
+        items = []
+        
+    def addFood(self, foodObject):
+        items.append(foodObject)
 
-#Dictionary
-sandwich_answer = {"price": 9.99, "calories": 1500, "qt": 0}
+        
+    def getTotal(self):
+        total = 0
+        for item in item:
+            total += getPrice(item)
+            return
+        
 
-pancake_answer = {"price": 2.99, "calories": 400, "qt": 0}
-
-se_answer = {"price": 5.99, "calories": 600, "qt": 0}
-
-be_answer = {"price": 5.00, "calories": 600, "qt": 0}
-
-bp_answer = {"price": 12.99, "calories": 2000, "qt": 0}
-
+class Food(self):
+    def __init__(self, food, qt, price, cal):
+        self.food = food
+        self.qt = qt
+        self.price = price
+        self.cal = cal
+        
+        
+    def getPrice(self):
+        return self.price * self.qt
+        
 
 #Confirm
 def confirm():
@@ -156,7 +169,7 @@ def run_program():
 def ask():
     print("\n\tWelcome to Resturaunt Order Program!")
     start_about_help = input(
-        f'\n\nGitHub: https://github.com/hhbo62/Restaurant-Order-Program\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in	the new update). \nType [help] to go to help. \nType [exit] to exit program. '
+        f'\n\nGitHub: https://github.com/hhbo62/Restaurant-Order-Program\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. '
     )
 
     answer = start_about_help.lower()
@@ -190,4 +203,6 @@ def start(answer):
 
 
 ask()
+foods = Foods()
+food = Food()
 #issubclass
