@@ -4,7 +4,7 @@
 from time import sleep
 
 #Version
-version = 0.5
+version = 2.5
 
 about_screen = f"""
 \tThis is Resturaunt Order Program v.{version}
@@ -12,17 +12,11 @@ about_screen = f"""
 
 \n\tVersion {version} is here!
 \tAdded:
-\t\tMore efficient program code using dictionarys
-\t\tAbout page
-\t\tStart Menu
+\t\t(MAJOR) More efficient program code using classes
+\t\tWebpage
 \n\tComing Soon:\n
 \t\tHelp page
-\t\tProgram Loops more than once
-\t\tEven MORE efficient program; re-write ENTIRE code and use modules and classes
 \t\tA GUI
-\t\tA website
-\n\tUgrent Updates:\n
-\t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
 quantity = 00
 
@@ -172,7 +166,7 @@ def take_order():
     print("Total Price:")
     print(f'${foodslist.totalPrice}')
     
-    foodslist.getTotalCal
+    foodslist.getTotalCal()
     print("Total Cals:")
     print(foodslist.totalCal)
     
