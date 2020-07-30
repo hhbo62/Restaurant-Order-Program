@@ -4,7 +4,7 @@
 from time import sleep
 
 #Version
-version = 0.5
+version = 2.5
 
 about_screen = f"""
 \tThis is Resturaunt Order Program v.{version}
@@ -12,33 +12,57 @@ about_screen = f"""
 
 \n\tVersion {version} is here!
 \tAdded:
-\t\tMore efficient program code using dictionarys
-\t\tAbout page
-\t\tStart Menu
+\t\t(MAJOR) More efficient program code using classes
+\t\tWebpage
 \n\tComing Soon:\n
 \t\tHelp page
-\t\tProgram Loops more than once
-\t\tEven MORE efficient program; re-write ENTIRE code and use modules and classes
 \t\tA GUI
-\t\tA website
-\n\tUgrent Updates:\n
-\t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
+quantity = 00
 
-#Set up a dict for the accurate totals:
-orders = {}
+#items = []
+#Class
+class FoodsList():
+    def __init__(self):
+        self.items = []
+        self.quantity = 0
+        self.totalPrice = 0
+        self.totalCal = 0
+        
+    def addFood(self, foodObject):
+        self.items.append(foodObject)
 
-#Dictionary
-sandwich_answer = {"price": 9.99, "calories": 1500, "qt": 0}
+        
+    def getTotalPrice(self):
+        self.totalPrice = 0
+        for item in self.items:
+            item.getPrice()
+            self.totalPrice += int(item.totalPrice)
+            
+    def getTotalCal(self):
+        self.totalCal = 0
+        for item in self.items:
+            item.getCal()
+            self.totalCal += int(item.cal)
+    
 
-pancake_answer = {"price": 2.99, "calories": 400, "qt": 0}
-
-se_answer = {"price": 5.99, "calories": 600, "qt": 0}
-
-be_answer = {"price": 5.00, "calories": 600, "qt": 0}
-
-bp_answer = {"price": 12.99, "calories": 2000, "qt": 0}
-
+class Food():
+    def __init__(self, food, qt, price, cal):
+        self.food = food
+        self.qt = qt
+        self.price = price
+        self.cal = cal
+        
+        
+    def getPrice(self):
+        self.totalPrice = int(self.price) * self.qt
+    
+    def getQt(self):
+        self.quantity = self.qt
+    
+    def getCal(self):
+        self.cal = self.cal
+        
 
 #Confirm
 def confirm():
@@ -64,87 +88,88 @@ def confirm():
 def take_order():
     #Taking it
     print(
-        f'Sandwich: ({sandwich_answer["calories"]} calories, ${sandwich_answer["price"]})'
+        f'Sandwich: (300 calories, $2.00)'
     )
     sandwich_answer1 = input()
-    sandwich_answer["qt"] = int(sandwich_answer1)
-    orders['Sandwich'] = sandwich_answer["qt"]
+    sandwhich = Food("sandwhich", sandwich_answer1, 2.00, 300)
+    foodslist.addFood(sandwhich)
+    
 
     print(
-        f'\nPancake: ({pancake_answer["calories"]} calories, ${pancake_answer["price"]})'
+        f'\nPancake: (300 calories, $2.00)'
     )
     pancake_answer1 = input()
-    pancake_answer["qt"] = int(pancake_answer1)
-    orders['Pancake'] = pancake_answer["qt"]
+    pancake = Food("pancake", pancake_answer1, 2.00, 300)
+    foodslist.addFood(pancake)
 
     print(
-        f'\nScrambled Eggs: ({se_answer["calories"]} calories, ${se_answer["price"]})'
+        f'\nScrambled Eggs: (300 calories, $2.00)'
     )
     se_answer1 = input()
-    se_answer["qt"] = int(se_answer1)
-    orders['Scrambled Eggs'] = se_answer["qt"]
+    se = Food("se", se_answer1, 2.00, 300)
+    foodslist.addFood(se)
 
     print(
-        f'\nBoiled Eggs: ({be_answer["calories"]} calories, ${be_answer["price"]})'
+        f'\nBoiled Eggs: (300 calories, $2.00)'
     )
     be_answer1 = input()
-    be_answer["qt"] = int(be_answer1)
-    orders['Boiled Eggs'] = be_answer["qt"]
+    be = Food("be", be_answer1, 2.00, 300)
+    foodslist.addFood(be)
 
     print(
-        f'\nBreakfast Pizza: ({bp_answer["calories"]} calories, ${bp_answer["price"]})'
+        f'\nBreakfast Pizza: (300 calories, $2.00)'
     )
     bp_answer1 = input()
-    bp_answer["qt"] = int(bp_answer1)
-    orders['Breakfast Pizza'] = bp_answer["qt"]
+    bp = Food("bp", bp_answer1, 2.00, 300)
+    foodslist.addFood(bp)
 
     print(f' \n\tYour Order:\n')
 
     #to display or not to display. That is the question
-    if sandwich_answer["qt"] > 0:
-        if sandwich_answer["qt"] == 1:
+    sandwhich.getQt()
+    if int(sandwhich.quantity) > 0:
+        if int(sandwhich.quantity) == 1:
             print("One Sandwich")
         else:
-            print(f'Sandwiches: {sandwich_answer["qt"]}')
+            print(f'Sandwiches: {sandwhich.quantity}')
 
-    if pancake_answer["qt"] > 0:
-        if pancake_answer["qt"] == 1:
+    pancake.getQt()
+    if float(pancake.quantity) > 0:
+        if float(pancake.quantity) == 1:
             print("One Pancake")
         else:
-            print(f'Pancakes: {pancake_answer["qt"]}')
-
-    if se_answer["qt"] > 0:
-        if se_answer["qt"] == 1:
+            print(f'Pancakes: {pancake.quantity}')
+    
+    se.getQt()
+    if float(se.quantity) > 0:
+        if float(se.quantity) == 1:
             print("One Scrambled Egg")
         else:
-            print(f'Scrambled Eggs: {se_answer["qt"]}')
+            print(f'Scrambled Eggs: {se.quantity}')
 
-    if be_answer["qt"] > 0:
-        if be_answer["qt"] == 1:
+    be.getQt()
+    if float(be.quantity) > 0:
+        if float(be.quantity) == 1:
             print("One Boiled Egg")
         else:
-            print(f'Boiled Eggs: {be_answer["qt"]}')
+            print(f'Boiled Eggs: {be.quantity}')
 
-    if bp_answer["qt"] > 0:
-        if bp_answer["qt"] == 1:
+    bp.getQt()
+    if float(bp.quantity) > 0:
+        if float(bp.quantity) == 1:
             print("One Breakfast Pizza")
         else:
-            print(f'Breakfast Pizzas: {bp_answer["qt"]}')
-
+            print(f'Breakfast Pizzas: {bp.quantity}')
     #total price+Cal
-    total_price = 123
-    total_price = sandwich_answer["price"] + pancake_answer[
-        "price"] + se_answer["price"] + be_answer["price"]
-
-    print(f'Total: ${total_price}')
-
-    total_cal = "global"
-    total_cal = sandwich_answer["calories"] + pancake_answer[
-        "calories"] + se_answer["calories"] + be_answer["calories"]
-
-    print(f'Calories: {total_cal}')
-
-
+    foodslist.getTotalPrice()
+    
+    print("Total Price:")
+    print(f'${foodslist.totalPrice}')
+    
+    foodslist.getTotalCal()
+    print("Total Cals:")
+    print(foodslist.totalCal)
+    
 #run
 def run_program():
     print("\n\tResturant Order Form:")
@@ -156,7 +181,7 @@ def run_program():
 def ask():
     print("\n\tWelcome to Resturaunt Order Program!")
     start_about_help = input(
-        f'\n\nGitHub: https://github.com/hhbo62/Restaurant-Order-Program\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in	the new update). \nType [help] to go to help. \nType [exit] to exit program. '
+        f'\n\nGitHub: https://github.com/hhbo62/Restaurant-Order-Program\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. '
     )
 
     answer = start_about_help.lower()
@@ -188,6 +213,5 @@ def start(answer):
         print("\nExiting Program...")
         sleep(1)
 
-
+foodslist = FoodsList()
 ask()
-#issubclass
