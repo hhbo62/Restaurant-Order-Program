@@ -127,33 +127,33 @@ def take_order():
         else:
             print(f'Sandwiches: {sandwich_answer["qt"]}')
 
-    if pancake_answer["qt"] > 0:
-        if pancake_answer["qt"] == 1:
+    if pancake.getQt > 0:
+        if pancake.getQt == 1:
             print("One Pancake")
         else:
             print(f'Pancakes: {pancake_answer["qt"]}')
 
-    if se_answer["qt"] > 0:
-        if se_answer["qt"] == 1:
+    if se.getQt > 0:
+        if se.getQ == 1:
             print("One Scrambled Egg")
         else:
             print(f'Scrambled Eggs: {se_answer["qt"]}')
 
-    if be_answer["qt"] > 0:
-        if be_answer["qt"] == 1:
+    if be.getQt > 0:
+        if be.getQt == 1:
             print("One Boiled Egg")
         else:
             print(f'Boiled Eggs: {be_answer["qt"]}')
 
-    if bp_answer["qt"] > 0:
-        if bp_answer["qt"] == 1:
+    if bp.getQt > 0:
+        if bp.getQt == 1:
             print("One Breakfast Pizza")
         else:
             print(f'Breakfast Pizzas: {bp_answer["qt"]}')
 
     #total price+Cal
-    total_price = sandwich_answer["price"] + pancake_answer[
-        "price"] + se_answer["price"] + be_answer["price"]
+    #total_price = sandwich_answer["price"] + pancake_answer[
+     #   "price"] + se_answer["price"] + be_answer["price"]
 
     print(f'Total: ${total_price}')
 
@@ -207,8 +207,6 @@ def start(answer):
         print("\nExiting Program...")
         sleep(1)
 
-
-ask()
 foodslist = FoodsList()
-food = Food()
+ask()
 #issubclass
