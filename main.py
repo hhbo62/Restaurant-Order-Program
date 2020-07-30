@@ -24,7 +24,9 @@ about_screen = f"""
 \n\tUgrent Updates:\n
 \t\tThe Total Prices and total calories don't work (and I can't figure out how to fix 'em!!!!
 """
+quantity = None
 
+items = []
 #Class
 class FoodsList():
     def __init__(self):
@@ -38,7 +40,7 @@ class FoodsList():
         total = 0
         for item in item:
             total += getPrice(item)
-            return
+            quantity =  total
         
 
 class Food():
@@ -50,13 +52,13 @@ class Food():
         
         
     def getPrice(self):
-        return self.price * self.qt
+        quantity = int(self.price * self.qt)
     
     def getQt(self):
-        return self.qt
+        quantity = int(self.qt)
     
     def getCal(self):
-        return self.cal
+        quantity = int(self.cal)
         
 
 #Confirm
@@ -121,32 +123,37 @@ def take_order():
     print(f' \n\tYour Order:\n')
 
     #to display or not to display. That is the question
-    if sandwhich.getQt> 0:
-        if sandwhich.getQt == 1:
+    sandwhich.getQt
+    if int(quantity) > 0:
+        if int(quantity) == 1:
             print("One Sandwich")
         else:
             print(f'Sandwiches: {sandwich_answer["qt"]}')
 
-    if pancake.getQt > 0:
-        if pancake.getQt == 1:
+    pancake.getQt
+    if int(quantity) > 0:
+        if int(quantity) == 1:
             print("One Pancake")
         else:
             print(f'Pancakes: {pancake_answer["qt"]}')
-
-    if se.getQt > 0:
-        if se.getQ == 1:
+    
+    se.getQt
+    if int(quantity) > 0:
+        if int(quantity) == 1:
             print("One Scrambled Egg")
         else:
             print(f'Scrambled Eggs: {se_answer["qt"]}')
 
-    if be.getQt > 0:
-        if be.getQt == 1:
+    be.getQt
+    if int(quantity) > 0:
+        if int(quantity) == 1:
             print("One Boiled Egg")
         else:
             print(f'Boiled Eggs: {be_answer["qt"]}')
 
-    if bp.getQt > 0:
-        if bp.getQt == 1:
+    bp.getQt
+    if int(quantity) > 0:
+        if int(quantity) == 1:
             print("One Breakfast Pizza")
         else:
             print(f'Breakfast Pizzas: {bp_answer["qt"]}')
