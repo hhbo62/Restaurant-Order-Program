@@ -33,8 +33,8 @@ Will exit. (what did you expect it to do?)
 ## **I'M FINALLY DONE WITH THIS!!!**
 ### After SO long, I finally converted the program to classes!
 
-- [ ] Converted everything to class
+-  Converted everything to class
 
-- [ ]  Bumped version
+-   Bumped version
 
-- [ ] Fixed [Accurate Totals Issue (I think :P)](https://github.com/hhbo62/Restaurant-Order-Program/issues/1)
+- Fixed [Accurate Totals Issue (I think :P)](https://github.com/hhbo62/Restaurant-Order-Program/issues/1)
