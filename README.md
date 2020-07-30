@@ -1,4 +1,4 @@
-[![Run on Repl.it](https://repl.it/badge/github/hhbo62/Restaurant-Order-Program)](https://restaurant-order-program.hhbo64.repl.run)
+[![Run on Repl.it](https://repl.it/badge/github/hhbo62/Restaurant-Order-Program)](https://Restaurant-Order-Program.hhbo64.repl.run)
 # Restaurant-Order-Program
 A program modeling a restaurant with out classes
 This is basicly a random program that I made that simulates a resturaunt program. I'm also using it to help me get
