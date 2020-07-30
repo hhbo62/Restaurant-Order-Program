@@ -29,7 +29,7 @@ This will show an about screen. If you type **exit** it will go back to the menu
 ### Exit:
 Will exit. (what did you expect it to do?)
 
-#Version 2.5
+# Version 2.5
 ## **I'M FINALLY DONE WITH THIS!!!**
 ### After SO long, I finally converted the program to classes!
 
