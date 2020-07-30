@@ -26,7 +26,7 @@ about_screen = f"""
 """
 
 #Class
-class Foods(self):
+class FoodsList():
     def __init__(self):
         items = []
         
@@ -41,7 +41,7 @@ class Foods(self):
             return
         
 
-class Food(self):
+class Food():
     def __init__(self, food, qt, price, cal):
         self.food = food
         self.qt = qt
@@ -51,6 +51,12 @@ class Food(self):
         
     def getPrice(self):
         return self.price * self.qt
+    
+    def getQt(self):
+        return self.qt
+    
+    def getCal(self):
+        return self.cal
         
 
 #Confirm
@@ -77,45 +83,46 @@ def confirm():
 def take_order():
     #Taking it
     print(
-        f'Sandwich: ({sandwich_answer["calories"]} calories, ${sandwich_answer["price"]})'
+        f'Sandwich: (300 calories, $2.00)'
     )
     sandwich_answer1 = input()
-    sandwich_answer["qt"] = int(sandwich_answer1)
-    orders['Sandwich'] = sandwich_answer["qt"]
+    sandwhich = Food("sandwhich", sandwich_answer1, 2.00, 300)
+    foodslist.addFood(sandwhich)
+    
 
     print(
-        f'\nPancake: ({pancake_answer["calories"]} calories, ${pancake_answer["price"]})'
+        f'\nPancake: (300 calories, $2.00)'
     )
     pancake_answer1 = input()
-    pancake_answer["qt"] = int(pancake_answer1)
-    orders['Pancake'] = pancake_answer["qt"]
+    pancake = Food("pancake", pancake_answer1, 2.00, 300)
+    foodslist.addFood(pancake)
 
     print(
-        f'\nScrambled Eggs: ({se_answer["calories"]} calories, ${se_answer["price"]})'
+        f'\nScrambled Eggs: (300 calories, $2.00)'
     )
     se_answer1 = input()
-    se_answer["qt"] = int(se_answer1)
-    orders['Scrambled Eggs'] = se_answer["qt"]
+    se = Food("se", se_answer1, 2.00, 300)
+    foodslist.addFood(se)
 
     print(
-        f'\nBoiled Eggs: ({be_answer["calories"]} calories, ${be_answer["price"]})'
+        f'\nBoiled Eggs: (300 calories, $2.00)'
     )
     be_answer1 = input()
-    be_answer["qt"] = int(be_answer1)
-    orders['Boiled Eggs'] = be_answer["qt"]
+    be = Food("be", be_answer1, 2.00, 300)
+    foodslist.addFood(be)
 
     print(
-        f'\nBreakfast Pizza: ({bp_answer["calories"]} calories, ${bp_answer["price"]})'
+        f'\nBreakfast Pizza: (300 calories, $2.00)'
     )
     bp_answer1 = input()
-    bp_answer["qt"] = int(bp_answer1)
-    orders['Breakfast Pizza'] = bp_answer["qt"]
+    bp = Food("bp", bp_answer1, 2.00, 300)
+    foodslist.addFood(bp)
 
     print(f' \n\tYour Order:\n')
 
     #to display or not to display. That is the question
-    if sandwich_answer["qt"] > 0:
-        if sandwich_answer["qt"] == 1:
+    if sandwhich.getQt> 0:
+        if sandwhich.getQt == 1:
             print("One Sandwich")
         else:
             print(f'Sandwiches: {sandwich_answer["qt"]}')
@@ -145,7 +152,6 @@ def take_order():
             print(f'Breakfast Pizzas: {bp_answer["qt"]}')
 
     #total price+Cal
-    total_price = 123
     total_price = sandwich_answer["price"] + pancake_answer[
         "price"] + se_answer["price"] + be_answer["price"]
 
@@ -203,6 +209,6 @@ def start(answer):
 
 
 ask()
-foods = Foods()
+foodslist = FoodsList()
 food = Food()
 #issubclass
