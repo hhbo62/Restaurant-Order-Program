@@ -176,8 +176,8 @@ def run_program():
     confirm()
 
 
-#ask
-def ask():
+#begin first part of program
+def begin():
     print("\n\tWelcome to Resturaunt Order Program!")
     start_about_help = input(
         f'\n\nWebsite: https://hhbo62.github.io/Restaurant-Order-Program/\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. '
@@ -213,4 +213,4 @@ def start(answer):
         sleep(1)
 
 foodslist = FoodsList()
-ask()
+begin()
