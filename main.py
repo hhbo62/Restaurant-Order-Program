@@ -2,6 +2,8 @@
 #Add: openFiles.py (after finished) Add: acurate totals.
 #note: this is the main program. All other files are test files (except stats.txt).
 from time import sleep
+import tkinter as tk
+window = tk.Tk()
 
 #Version
 version = 2.5
@@ -179,6 +181,10 @@ def run_program():
 #begin first part of program
 def begin():
     print("\n\tWelcome to Resturaunt Order Program!")
+    
+    greeting = tk.Label(text=f'\n\nWebsite: https://hhbo62.github.io/Restaurant-Order-Program/\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. ')
+    greeting.pack()
+    
     start_about_help = input(
         f'\n\nWebsite: https://hhbo62.github.io/Restaurant-Order-Program/\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. '
     )
@@ -214,3 +220,4 @@ def start(answer):
 
 foodslist = FoodsList()
 begin()
+window.mainloop()
