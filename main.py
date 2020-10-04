@@ -183,7 +183,10 @@ def begin():
     print("\n\tWelcome to Resturaunt Order Program!")
     
     greeting = tk.Label(text=f'\n\nWebsite: https://hhbo62.github.io/Restaurant-Order-Program/\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. ')
+    
+    start_program_btn = tk.Button(text="Start Program", command = start("start"))
     greeting.pack()
+    start_program_btn.pack()
     
     start_about_help = input(
         f'\n\nWebsite: https://hhbo62.github.io/Restaurant-Order-Program/\nThis is version {version}.\n\nType [start] to start program. \nType[About] to go to the about screen (and see what changed in the new update). \nType [help] to go to help. \nType [exit] to exit program. '
