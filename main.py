@@ -20,7 +20,6 @@ about_screen = f"""
 """
 quantity = 00
 
-#items = []
 #Class
 class FoodsList():
     def __init__(self):
