@@ -202,12 +202,12 @@ def start(answer):
         print(about_screen)
         exit_about = input("type [exit] to exit ")
         if exit_about.lower() == "exit":
-            ask()
+            begin()
     elif answer == "help":
         print(
             f'\nhelp is coming soon! (Probably in verson 2.5. This is only version {version})\n'
         )
-        ask()
+        begin()
     elif answer == "exit":
         print("\nExiting Program...")
         sleep(1)
