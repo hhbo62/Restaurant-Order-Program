@@ -1,4 +1,4 @@
-#https://github.com/hhbo62/Restaurant-Order-Program
+#Link: https://github.com/hhbo62/Restaurant-Order-Program
 #Add: openFiles.py (after finished) Add: acurate totals.
 #note: this is the main program. All other files are test files (except stats.txt).
 from time import sleep
